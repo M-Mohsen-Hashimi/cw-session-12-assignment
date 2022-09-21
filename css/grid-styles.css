@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins';
+  letter-spacing: 2px;
+}
+.grid-container,
+.cards,
+table {
+  display: grid;
+}
+.grid-container {
+  background-color: #eee;
+  margin: 0 auto;
+  grid-template-columns: repeat(6, 1fr);
+}
+.grid-container > div {
+  background-color: #ddd;
+}
+.grid-container > div:nth-child(1) {
+  grid-column: span 6;
+  background-color: rgb(84, 84, 228);
+  color: white;
+  padding-left: 20px;
+}
+.grid-container > div:nth-child(2) {
+  grid-column: span 6;
+  display: none;
+  text-align: left;
+  background-color: rgb(84, 84, 228);
+}
+.grid-container > div:nth-child(3) {
+  text-align: left;
+  height: 591px;
+  background-color: rgb(84, 84, 228);
+}
+.grid-container > div:nth-child(4) {
+  grid-column: span 5;
+  text-align: left;
+  height: 591px;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+li {
+  padding: 15px 20px;
+}
+li:hover {
+  background-color: rgb(64, 64, 200);
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  .grid-container > div:nth-child(2) {
+    display: grid;
+  }
+  .grid-container > div:nth-child(3) {
+    display: none;
+  }
+  .grid-container > div:nth-child(4) {
+    grid-column: span 6;
+  }
+}
+.cards {
+  grid-template-columns: repeat(6, 1fr);
+  border-radius: 4px;
+  background-color: white;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cards > div:nth-child(1) {
+  grid-column: span 2;
+}
+.cards > div:nth-child(2) {
+  grid-column: span 2;
+}
+.cards > div:nth-child(3) {
+  grid-column: span 2;
+}
+.cards > div:nth-child(4) {
+  grid-column: span 6;
+}
+.card {
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 20px 20px 0 20px;
+}
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cards i {
+  font-size: 50px;
+}
+.card,
+table {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+table {
+  padding: 20px;
+  margin: 20px;
+}
+th,
+td {
+  padding: 15px;
+  width: 50%;
+}
+tr:hover {
+  background-color: #eee;
+}
